@@ -1,0 +1,3 @@
+Go to "Screenshots" folder and run "screenshots.exe".
+
+Check input/output to view how program works.
