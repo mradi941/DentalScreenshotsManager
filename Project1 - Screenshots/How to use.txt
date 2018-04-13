@@ -1,3 +1,7 @@
-Go to "Screenshots" folder and run "screenshots.exe".
 
-Check input/output to view how program works.
+HOW TO RUN THE APP??
+   -> Go to "Screenshots - just app" folder and run "screenshots.exe".
+
+Before, watch the "Tutorial"...
+
+Note: Check "input/output" if you want to see how program works on files :D
