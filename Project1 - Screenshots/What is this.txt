@@ -1,3 +1,0 @@
-This is a program realised in C#, who helps Dental Radiology to makes automatic
-  reports, and automatic copy-paste files from diferent locations.
- 

@@ -70,7 +70,7 @@ namespace screenshots
         private int verifica_caz_multiplu()
         {
             int nr_pacienti = 0;
-           // MessageBox.Show(export_orto_target);
+       
             string[] pacienti = Directory.GetDirectories(export_orto_target);
             
             foreach (string pac in pacienti)
@@ -207,7 +207,6 @@ namespace screenshots
             y = y + deviere_in_jos;
 
             int deviereR, deviereL;
-            // deviereR = Convert.ToInt32((float)latime_poza / 5F);
             deviereR = Convert.ToInt32((4F * (float)latime_poza) / 5F);
 
             var font1 = new Font("Arial", 152, FontStyle.Bold, GraphicsUnit.Pixel);
@@ -313,8 +312,7 @@ namespace screenshots
             x2[nr_poza] = dreapta;
 
 
-            // MessageBox.Show(y1[nr_poza].ToString()+" "+y2[nr_poza].ToString()+" "+x1[nr_poza].ToString()+" "+x2[nr_poza].ToString()+" ");
-            //calculam lungimea si latimea:
+                        //calculam lungimea si latimea:
 
             lungime[nr_poza] = y2[nr_poza] - y1[nr_poza];
             latime[nr_poza] = x2[nr_poza] - x1[nr_poza];
@@ -475,9 +473,9 @@ namespace screenshots
                         return 1;
                     else
                     {
-                         //   3Shape - fisiere\poze\
+                        
                         ultimele_litere=dir.Substring(dir.Length-21,21);
-                       // MessageBox.Show("sugi pula  "+ultimele_litere);
+                   
                         return 2;
                     }
 
@@ -495,7 +493,7 @@ namespace screenshots
             {
                 sumar1 = (IncadrareImagini2(ResizeNow2(imf[1]), ResizeNow2(imf[2])));
 
-           //     MessageBox.Show("plm,,");
+          
                 sumar1 = ScrieTot(sumar1, 1); sumar1.Save(destinatie_fotografii + "sumar 1.jpg");
                  
                 sumar2 = (IncadrareImagini2(ResizeNow2(imf[3]), ResizeNow2(imf[4])));
@@ -609,12 +607,7 @@ namespace screenshots
             float latime = imagine.Width;
             float m = 952F / (float)lungime;
             int l, L; L = Convert.ToInt32((float)latime * m); l = Convert.ToInt32((float)lungime * m);
-            //if (L > 1690)
-            //{
-            //    m = 1690 / L;
-            //    L = Convert.ToInt32(L * m);
-            //    l = Convert.ToInt32(l * m);
-            //}
+      
             Rectangle dest_rect = new Rectangle(0, 0, L, l);
             Bitmap destImage = new Bitmap(L, l);
 
@@ -653,9 +646,7 @@ namespace screenshots
                 using (var wrapmode = new ImageAttributes())
                 {
                     wrapmode.SetWrapMode(WrapMode.TileFlipXY);
-                    // g.DrawImage(imagine1, chenar1, 50, (2480 - lungime_img) / 2, latime_img, lungime_img , GraphicsUnit.Pixel, wrapmode);
-                    //g.DrawImage(imagine2, chenar2, 80 + latime_img, (2480 - lungime_img) / 2, latime_img, lungime_img, GraphicsUnit.Pixel, wrapmode);
-
+               
                     g.DrawImage(imagine1, 50, sss + 100);
                     g.DrawImage(imagine2, 80 + latime_img, sss + 100);
                 }
@@ -731,7 +722,7 @@ namespace screenshots
 
             }
             //apoi vom redimensiona la marimea potrivita cu functia resizenow fiecare poza in parte si
-            //o vom mari cu m[i] pe fiecare ca sa fie la "lungimea" care trrebuie
+            //o vom mari cu m[i] pe fiecare ca sa fie la "lungimea" care trebuie
 
             calculeaza_m(nr_poze);
 
@@ -925,7 +916,7 @@ namespace screenshots
             }
             else if (Path.GetFileName(destination_X) == "3Shape - fisiere")
             {
-               // MessageBox.Show(Path.GetFileName(destination_X));
+               
                 destinatie_fotografii = destinatie_fotografii + @"poze\";
             }
             else

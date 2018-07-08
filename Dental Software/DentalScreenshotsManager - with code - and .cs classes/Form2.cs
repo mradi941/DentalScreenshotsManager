@@ -15,46 +15,7 @@ namespace screenshots
 {
     public partial class Form2 : Form
     {
-     //   #region variabile form1
-     //   public int chenar_deschis;
-
-
-
-
-     //   int TogMove;
-     //   int MValX;
-     //   int MValY;
-
-     ////   Rectangle[] cropRect = new Rectangle[30]; // dreptunghiuri utile pentru decuparea pozelor la 
-     //   // coordonatele corespunzatoare/
-        
-
-
-
-     //   //int[] x1 = new int[10];
-     //   //int[] y1 = new int[10];     // coordonatele 
-     //   //int[] x2 = new int[10];
-     //   //int[] y2 = new int[10];
-
-     //   //int[] lungime = new int[10];
-     //   //int[] latime = new int[10];
-
-     //   //int lungime_tablou, latime_tablou;
-     //   //int deviere_la_stanga = 58;
-     //   //int deviere_in_jos = -12;
-
-     //   //float[] m = new float[10];
-
-
-
-
-     //   //Form2 chenar = new Form2();
-     //   //Form3 bck = new Form3();
-     //   //Image[] poze = new Image[10];
-     //   //Image[] imf = new Image[10];
-     //   //int nr_poze = 0;
-     //   #endregion
- 
+  
         int TogMove;
         int MValX;
         int MValY;
@@ -68,24 +29,6 @@ namespace screenshots
         SaveFileDialog salveaza_poze = new SaveFileDialog();
 
         public string destinatie_fotografii;
-        //public string finalizare_destinatie(string destinatie_fotografii)
-        //{
-        //    string target;
-            
-        //    if (Path.GetFileName(destinatie_fotografii) == "poze")
-        //        target = destinatie_fotografii;
-        //    else if (Path.GetFileName(destinatie_fotografii) == "3Shape - fisiere")
-        //        target = destinatie_fotografii + @"poze\";
-        //    else
-        //    {
-        //        File.Copy("3Shape - fisiere", @"C:\Users\Adi\Desktop\3Shape - fisiere");
-        //    }
-
-
-
-        //    target = "bla";
-        //    return target;
-        //}
         
         private void sterge_folder(int Step)
         {
@@ -99,8 +42,7 @@ namespace screenshots
 
         }
 
-        
-
+     
 
         #region Windows API
 
@@ -251,9 +193,9 @@ namespace screenshots
 
         public void locatie_salvare_poze()
         {
-           // chenar_poze.Enabled = false;
+          
             this.Close();
-            //MessageBox.Show(salveaza_poze.InitialDirectory);
+          
             using (StreamReader reader = new StreamReader(@"locatie.ini"))
             {
                 salveaza_poze.InitialDirectory = reader.ReadToEnd();
@@ -267,12 +209,12 @@ namespace screenshots
             {   
 
                 destinatie_fotografii = salveaza_poze.FileName;
-                // MessageBox.Show(salveaza_poze.FileName);
+               
                 string caractere = Path.GetFileName(destinatie_fotografii);
 
                 destinatie_fotografii = destinatie_fotografii.Substring(0, destinatie_fotografii.Length - caractere.Length);
 
-                //destinatie_fotografii = finalizare_destinatie(destinatie_fotografii);
+               
 
 
 
@@ -294,7 +236,7 @@ namespace screenshots
         }
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
-           // program.chenar_deschis = 0;
+           
             using (StreamWriter chenar_X = new StreamWriter(@"chenar_X.ini"))
             {
                 

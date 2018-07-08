@@ -268,7 +268,7 @@ namespace screenshots
             x2[nr_poza] = dreapta;
 
             
-           // MessageBox.Show(y1[nr_poza].ToString()+" "+y2[nr_poza].ToString()+" "+x1[nr_poza].ToString()+" "+x2[nr_poza].ToString()+" ");
+           
             //calculam lungimea si latimea:
 
             lungime[nr_poza] = y2[nr_poza] - y1[nr_poza];
@@ -389,7 +389,7 @@ namespace screenshots
         {
             //chenar_poze.Enabled = false;
             chenar.Close();
-            //MessageBox.Show(salveaza_poze.InitialDirectory);
+            
             using (StreamReader reader = new StreamReader(@"locatie.ini"))
             {
                 salveaza_poze.InitialDirectory = reader.ReadToEnd();
@@ -401,7 +401,7 @@ namespace screenshots
             {
 
                 destinatie_fotografii = salveaza_poze.FileName;
-                // MessageBox.Show(salveaza_poze.FileName);
+                
                 string caractere = Path.GetFileName(destinatie_fotografii);
 
                 destinatie_fotografii = destinatie_fotografii.Substring(0, destinatie_fotografii.Length - caractere.Length);
